@@ -7,11 +7,5 @@ extents = Vector2( 45, 8 )
 
 [node name="Long Bone" instance=ExtResource( 1 )]
 
-[node name="ColorRect" parent="." index="0"]
-margin_left = -45.0
-margin_top = -8.0
-margin_right = 45.0
-margin_bottom = 8.0
-
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )

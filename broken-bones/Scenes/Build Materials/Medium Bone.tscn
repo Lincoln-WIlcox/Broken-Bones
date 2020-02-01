@@ -6,12 +6,16 @@
 extents = Vector2( 30, 10 )
 
 [node name="Medium Bone" instance=ExtResource( 1 )]
+position = Vector2( 100, 100 )
 
-[node name="ColorRect" parent="." index="0"]
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="." index="1"]
 margin_left = -30.0
 margin_top = -10.0
 margin_right = 30.0
 margin_bottom = 10.0
-
-[node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

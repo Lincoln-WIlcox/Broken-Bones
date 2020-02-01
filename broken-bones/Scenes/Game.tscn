@@ -78,22 +78,42 @@ rect_pivot_offset = Vector2( -144.37, 51.0713 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.4
-custom_constants/separation = 30
+custom_constants/separation = 20
 
 [node name="Margin" type="MarginContainer" parent="Margin/Main HBox/Middle VBox"]
 margin_right = 436.0
 
 [node name="Timer" type="ProgressBar" parent="Margin/Main HBox/Middle VBox"]
-margin_top = 30.0
+margin_top = 20.0
 margin_right = 436.0
-margin_bottom = 44.0
+margin_bottom = 34.0
 
 [node name="Build Area" type="ColorRect" parent="Margin/Main HBox/Middle VBox"]
-margin_top = 74.0
+margin_top = 54.0
 margin_right = 436.0
-margin_bottom = 560.0
+margin_bottom = 516.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin/Main HBox/Middle VBox"]
+margin_top = 536.0
+margin_right = 436.0
+margin_bottom = 560.0
+
+[node name="Name" type="LineEdit" parent="Margin/Main HBox/Middle VBox/HBoxContainer"]
+margin_right = 360.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+placeholder_text = "Name"
+caret_blink = true
+
+[node name="Submit" type="Button" parent="Margin/Main HBox/Middle VBox/HBoxContainer"]
+margin_left = 364.0
+margin_right = 436.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+text = "Submit"
 
 [node name="Bones Area" type="ColorRect" parent="Margin/Main HBox"]
 margin_left = 749.0
