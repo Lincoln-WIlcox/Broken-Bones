@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="broken-bones"
-run/main_scene="res://Scenes/Levels/LevelTemplate.tscn"
+run/main_scene="res://Scenes/Levels/TRex Level.tscn"
 config/icon="res://icon.png"
 
 [display]
