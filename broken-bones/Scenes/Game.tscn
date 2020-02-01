@@ -1,0 +1,105 @@
+[gd_scene format=2]
+
+[node name="Game UI Container" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main HBox" type="HBoxContainer" parent="Margin"]
+margin_right = 984.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 40
+
+[node name="Left VBox" type="VBoxContainer" parent="Margin/Main HBox"]
+margin_right = 233.0
+margin_bottom = 560.0
+rect_pivot_offset = Vector2( -144.37, 51.0713 )
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+custom_constants/separation = 10
+
+[node name="Strikes Box" type="ColorRect" parent="Margin/Main HBox/Left VBox"]
+margin_right = 233.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+color = Color( 1, 0, 0, 1 )
+
+[node name="Margin" type="MarginContainer" parent="Margin/Main HBox/Left VBox"]
+margin_top = 93.0
+margin_right = 233.0
+margin_bottom = 134.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Other Thing That Goes There" type="ColorRect" parent="Margin/Main HBox/Left VBox"]
+margin_top = 144.0
+margin_right = 233.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="Middle VBox" type="VBoxContainer" parent="Margin/Main HBox"]
+margin_left = 273.0
+margin_right = 709.0
+margin_bottom = 560.0
+rect_pivot_offset = Vector2( -144.37, 51.0713 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.4
+custom_constants/separation = 30
+
+[node name="Margin" type="MarginContainer" parent="Margin/Main HBox/Middle VBox"]
+margin_right = 436.0
+
+[node name="Timer" type="ProgressBar" parent="Margin/Main HBox/Middle VBox"]
+margin_top = 30.0
+margin_right = 436.0
+margin_bottom = 44.0
+
+[node name="Build Area" type="ColorRect" parent="Margin/Main HBox/Middle VBox"]
+margin_top = 74.0
+margin_right = 436.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Bones Area" type="ColorRect" parent="Margin/Main HBox"]
+margin_left = 749.0
+margin_right = 984.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+color = Color( 1, 0.866667, 0, 1 )
