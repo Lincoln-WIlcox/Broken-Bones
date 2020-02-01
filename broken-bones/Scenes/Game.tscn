@@ -36,6 +36,7 @@ size_flags_vertical = 3
 custom_constants/separation = 40
 
 [node name="Left VBox" type="VBoxContainer" parent="Margin/Main HBox"]
+editor/display_folded = true
 margin_right = 233.0
 margin_bottom = 560.0
 rect_pivot_offset = Vector2( -144.37, 51.0713 )
