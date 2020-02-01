@@ -6,6 +6,7 @@
 extents = Vector2( 45, 8 )
 
 [node name="Long Bone" instance=ExtResource( 1 )]
+selection_variance = Vector2( 45, 8 )
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )

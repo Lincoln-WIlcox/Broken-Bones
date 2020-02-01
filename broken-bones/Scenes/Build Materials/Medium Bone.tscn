@@ -5,8 +5,8 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 10 )
 
-[node name="Medium Bone" index="0" instance=ExtResource( 1 )]
-position = Vector2( 100, 100 )
+[node name="Medium Bone" instance=ExtResource( 1 )]
+selection_variance = Vector2( 27, 4 )
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )
