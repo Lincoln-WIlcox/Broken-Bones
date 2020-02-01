@@ -12,6 +12,10 @@ Sticker like-bone placement
 
 Name dinosaurs
 
+you make exhibits
+
+3 dinos are an exhibit
+
 Timer limits how long you have before you fail
 	-Timer doesn't start until you drag first piece
 	-Progress bar type timer
@@ -26,3 +30,5 @@ When you place bones you can't move them again
 Pedastals in background with your previous creations
 
 Drone flies bones away
+
+you are rated on those exhibits
