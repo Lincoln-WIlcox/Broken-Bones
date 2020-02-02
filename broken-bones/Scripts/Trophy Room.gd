@@ -16,7 +16,7 @@ $"Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer3"
 ]
 
 onready var labels = [
-$"Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer2/Hbox/MarginContainer3/Label",
+$"Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer4/Hbox2/MarginContainer3/Label",
 $"Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3/Hbox2/MarginContainer3/Label",
 $"Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3/MarginContainer3/Label"
 ]

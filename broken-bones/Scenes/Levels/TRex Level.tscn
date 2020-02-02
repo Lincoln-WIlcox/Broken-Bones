@@ -30,7 +30,6 @@ font_data = ExtResource( 5 )
 [sub_resource type="RectangleShape2D" id=4]
 
 [node name="Game UI Container" type="Control"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -147,7 +146,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Margin/Main HBox/Middle VBox"]
-editor/display_folded = true
 margin_top = 1016.0
 margin_right = 868.0
 margin_bottom = 1040.0
@@ -183,7 +181,6 @@ stream = ExtResource( 7 )
 autoplay = true
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Trex Head" parent="Dinosaur Parts" instance=ExtResource( 8 )]
 position = Vector2( 1669, 259.677 )
