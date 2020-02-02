@@ -6,9 +6,10 @@ func _on_Submit_pressed():
 	var dinosaur_parts = []
 	
 	for part in $"Dinosaur Parts".get_children():
-		dinosaur_parts.append(part.duplicate())
+		if part in $"Build Area".get_overlapping_areas():
+			dinosaur_parts.append(part.duplicate())
 	
-	var smallestvector2 = dinosaur_parts[0].position
+	var smallestvector2 = dinosaur_parts[0].position if dinosaur_parts else null
 	
 	for part in dinosaur_parts:
 		if part.position.x < smallestvector2.x:
@@ -18,6 +19,8 @@ func _on_Submit_pressed():
 	
 	for part in dinosaur_parts:
 		part.position -= smallestvector2
+		
+	
 	
 	Global.add_dinosaur(Dinosaur.new(dinosaur_parts,$"Margin/Main HBox/Middle VBox/HBoxContainer/Name".text))
 	

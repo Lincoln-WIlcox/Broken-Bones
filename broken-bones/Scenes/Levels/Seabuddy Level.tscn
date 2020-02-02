@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=2]
@@ -49,6 +49,9 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 486.69, 439.907 )
+
 [node name="Game UI Container" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -85,6 +88,7 @@ size_flags_vertical = 3
 custom_constants/separation = 40
 
 [node name="Left VBox" type="VBoxContainer" parent="Margin/Main HBox"]
+editor/display_folded = true
 margin_right = 465.0
 margin_bottom = 1040.0
 rect_pivot_offset = Vector2( -144.37, 51.0713 )
@@ -198,6 +202,7 @@ size_flags_stretch_ratio = 0.75
 color = Color( 1, 0.866667, 0, 1 )
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 7 )
 random_parts_amount = 2
 
@@ -232,4 +237,14 @@ texture = ExtResource( 14 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Seabuddy Outline"]
 autoplay = "flash"
 anims/flash = SubResource( 6 )
+
+[node name="Build Area" type="Area2D" parent="."]
+position = Vector2( 1033.6, 558.15 )
+scale = Vector2( 1.00117, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Build Area"]
+shape = SubResource( 7 )
 [connection signal="pressed" from="Margin/Main HBox/Middle VBox/HBoxContainer/Submit" to="." method="_on_Submit_pressed"]

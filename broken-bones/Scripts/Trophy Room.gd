@@ -22,6 +22,7 @@ $"Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3/MarginContainer3/L
 ]
 
 func _ready():
+	Global.timer.stop()
 	
 	
 	
