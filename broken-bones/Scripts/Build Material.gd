@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 
 func _input(event):
    # Mouse in viewport coordinates
-	if event is InputEventMouseButton and event.pressed and event:
+	if event and event is InputEventMouseButton and event.pressed:
 		if match_mouse_pos():
 			lifted = !lifted
 
