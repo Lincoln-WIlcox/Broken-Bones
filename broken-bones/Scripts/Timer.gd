@@ -17,4 +17,4 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout():
-	print('whoops')
+	get_tree().change_scene("res://Scenes/Game Over Screen.tscn")
