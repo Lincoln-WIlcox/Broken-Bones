@@ -28,6 +28,8 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 6 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
@@ -162,19 +164,21 @@ puzzle_time = 100
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 66.0
 margin_right = 868.0
-margin_bottom = 1000.0
+margin_bottom = 983.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Margin/Main HBox/Middle VBox"]
-margin_top = 1020.0
+margin_top = 1003.0
 margin_right = 868.0
 margin_bottom = 1040.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.04
 custom_constants/separation = 10
 
 [node name="Name" type="LineEdit" parent="Margin/Main HBox/Middle VBox/HBoxContainer"]
 margin_right = 715.0
-margin_bottom = 20.0
+margin_bottom = 37.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 placeholder_text = "Name"
@@ -183,7 +187,7 @@ caret_blink = true
 [node name="Submit" type="Button" parent="Margin/Main HBox/Middle VBox/HBoxContainer"]
 margin_left = 725.0
 margin_right = 868.0
-margin_bottom = 20.0
+margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 text = "Submit"
