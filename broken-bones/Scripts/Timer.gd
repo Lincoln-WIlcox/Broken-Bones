@@ -12,7 +12,8 @@ func _ready() -> void:
 	
 	
 func _process(delta: float) -> void:
-	self.value = (timer.time_left / puzzle_time) * 100
+	var percentage = (timer.time_left / puzzle_time) * 100
+	self.value = percentage
 
 
 func _on_timer_timeout():
