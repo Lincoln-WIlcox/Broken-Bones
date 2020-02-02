@@ -24,6 +24,7 @@ $"Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3/MarginContainer3/L
 func _ready():
 	
 	
+	
 	if rand_range(0,2) > 1:
 		$"Space Background".visible = false
 	
