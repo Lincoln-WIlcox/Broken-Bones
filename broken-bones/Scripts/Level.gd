@@ -1,5 +1,5 @@
 extends Control
-
+export var next_scene: PackedScene
 
 func _on_Submit_pressed():
 	
@@ -23,3 +23,5 @@ func _on_Submit_pressed():
 	
 	if Global.dinosaurs.size() == 3:
 		get_tree().change_scene("res://Scenes/Game Over Screen.tscn")
+	elif next_scene:
+		get_tree().change_scene_to(next_scene)
