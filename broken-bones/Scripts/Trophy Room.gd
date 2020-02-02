@@ -15,6 +15,12 @@ $"Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer2",
 $"Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer3"
 ]
 
+onready var labels = [
+$"Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer2/Hbox/MarginContainer3/Label",
+$"Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3/Hbox2/MarginContainer3/Label",
+$"Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3/MarginContainer3/Label"
+]
+
 func _ready():
 	
 	for spotindex in range(dinospots.size()):
@@ -22,6 +28,6 @@ func _ready():
 	
 	for dinosaur_index in range(Global.dinosaurs.size()):
 		var dinosaur = Global.dinosaurs[dinosaur_index]
-		print(dinosaur.get_parts()[0])
+		labels[dinosaur_index].text = dinosaur.dino_name
 		for part in dinosaur.dinosaur_parts:
 			dinospots[dinosaur_index].add_child(part)

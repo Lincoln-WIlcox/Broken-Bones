@@ -28,7 +28,27 @@ margin_right = 1084.0
 [node name="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox" index="0"]
 margin_right = 332.0
 
-[node name="Pedastal 1" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox" index="2"]
+[node name="MarginContainer2" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox" index="2"]
+margin_right = 332.0
+
+[node name="Pedastal 1" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer2" index="0"]
+margin_right = 332.0
+
+[node name="Hbox" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer2" index="1"]
+margin_right = 332.0
+
+[node name="MarginContainer2" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer2/Hbox" index="0"]
+margin_right = 129.0
+
+[node name="MarginContainer3" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer2/Hbox" index="1"]
+margin_left = 133.0
+margin_right = 197.0
+
+[node name="Label" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer2/Hbox/MarginContainer3" index="0"]
+margin_right = 64.0
+
+[node name="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer2/Hbox" index="2"]
+margin_left = 201.0
 margin_right = 332.0
 
 [node name="Pedastal 2 Vbox" parent="Margin/Pedastal Hbox" index="3"]
@@ -38,7 +58,27 @@ margin_right = 1420.0
 [node name="MarginContainer2" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox" index="0"]
 margin_right = 332.0
 
-[node name="Pedastal 2" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox" index="2"]
+[node name="MarginContainer3" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox" index="2"]
+margin_right = 332.0
+
+[node name="Pedastal 1" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3" index="0"]
+margin_right = 332.0
+
+[node name="Hbox2" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3" index="1"]
+margin_right = 332.0
+
+[node name="MarginContainer2" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3/Hbox2" index="0"]
+margin_right = 129.0
+
+[node name="MarginContainer3" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3/Hbox2" index="1"]
+margin_left = 133.0
+margin_right = 197.0
+
+[node name="Label" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3/Hbox2/MarginContainer3" index="0"]
+margin_right = 64.0
+
+[node name="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3/Hbox2" index="2"]
+margin_left = 201.0
 margin_right = 332.0
 
 [node name="Pedastal 3 Vbox" parent="Margin/Pedastal Hbox" index="4"]
@@ -48,7 +88,27 @@ margin_right = 1756.0
 [node name="MarginContainer3" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox" index="0"]
 margin_right = 332.0
 
-[node name="Pedastal 3" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox" index="2"]
+[node name="MarginContainer4" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox" index="2"]
+margin_right = 332.0
+
+[node name="Pedastal 1" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4" index="0"]
+margin_right = 332.0
+
+[node name="Hbox3" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4" index="1"]
+margin_right = 332.0
+
+[node name="MarginContainer2" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3" index="0"]
+margin_right = 129.0
+
+[node name="MarginContainer3" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3" index="1"]
+margin_left = 133.0
+margin_right = 197.0
+
+[node name="Label" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3/MarginContainer3" index="0"]
+margin_right = 64.0
+
+[node name="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3" index="2"]
+margin_left = 201.0
 margin_right = 332.0
 
 [node name="R Margin" parent="Margin/Pedastal Hbox" index="5"]

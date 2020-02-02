@@ -19,7 +19,7 @@ func _on_Submit_pressed():
 	for part in dinosaur_parts:
 		part.position -= smallestvector2
 	
-	Global.add_dinosaur(Dinosaur.new(dinosaur_parts))
+	Global.add_dinosaur(Dinosaur.new(dinosaur_parts,$"Margin/Main HBox/Middle VBox/HBoxContainer/Name".text))
 	
 	if Global.dinosaurs.size() == 3:
 		get_tree().change_scene("res://Scenes/Game Over Screen.tscn")
