@@ -4,10 +4,10 @@ extends Node
 
 class_name Dinosaur
 
-func _init(_dinosaur_parts):
-	var dinosaur_parts = _dinosaur_parts
-
 var dinosaur_parts = []
 
-func create_parts():
-	pass
+func _init(_dinosaur_parts):
+	dinosaur_parts = _dinosaur_parts
+
+func get_parts():
+	return dinosaur_parts

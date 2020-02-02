@@ -25,31 +25,32 @@ __meta__ = {
 }
 
 [node name="Pedastal Hbox" type="HBoxContainer" parent="Margin"]
-margin_right = 864.0
-margin_bottom = 440.0
+margin_right = 1760.0
+margin_bottom = 920.0
 
 [node name="L Margin" type="MarginContainer" parent="Margin/Pedastal Hbox"]
-margin_bottom = 440.0
+margin_bottom = 920.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pedastal 1 Vbox" type="VBoxContainer" parent="Margin/Pedastal Hbox"]
 margin_left = 4.0
-margin_right = 286.0
-margin_bottom = 440.0
+margin_right = 585.0
+margin_bottom = 920.0
 size_flags_horizontal = 3
 
-[node name="Dinosaur Box" type="ColorRect" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox"]
-margin_right = 282.0
-margin_bottom = 186.0
-size_flags_horizontal = 3
+[node name="MarginContainer" type="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox"]
+margin_right = 581.0
+margin_bottom = 666.0
 size_flags_vertical = 3
 
+[node name="Dinosaur1" type="Node2D" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox"]
+
 [node name="Pedastal 1" type="TextureRect" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox"]
-margin_top = 190.0
-margin_right = 282.0
-margin_bottom = 440.0
+margin_top = 670.0
+margin_right = 581.0
+margin_bottom = 920.0
 size_flags_vertical = 0
 texture = ExtResource( 1 )
 stretch_mode = 4
@@ -58,21 +59,23 @@ __meta__ = {
 }
 
 [node name="Pedastal 2 Vbox" type="VBoxContainer" parent="Margin/Pedastal Hbox"]
-margin_left = 290.0
-margin_right = 572.0
-margin_bottom = 440.0
+margin_left = 589.0
+margin_right = 1170.0
+margin_bottom = 920.0
 size_flags_horizontal = 3
 
-[node name="Dinosaur Box2" type="ColorRect" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox"]
-margin_right = 282.0
-margin_bottom = 186.0
-size_flags_horizontal = 3
+[node name="MarginContainer2" type="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox"]
+margin_right = 581.0
+margin_bottom = 666.0
 size_flags_vertical = 3
 
+[node name="Dinosaur2" type="Node2D" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox"]
+position = Vector2( -585, 0 )
+
 [node name="Pedastal 2" type="TextureRect" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox"]
-margin_top = 190.0
-margin_right = 282.0
-margin_bottom = 440.0
+margin_top = 670.0
+margin_right = 581.0
+margin_bottom = 920.0
 texture = ExtResource( 1 )
 stretch_mode = 4
 __meta__ = {
@@ -80,21 +83,23 @@ __meta__ = {
 }
 
 [node name="Pedastal 3 Vbox" type="VBoxContainer" parent="Margin/Pedastal Hbox"]
-margin_left = 576.0
-margin_right = 858.0
-margin_bottom = 440.0
+margin_left = 1174.0
+margin_right = 1755.0
+margin_bottom = 920.0
 size_flags_horizontal = 3
 
-[node name="Dinosaur Box3" type="ColorRect" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox"]
-margin_right = 282.0
-margin_bottom = 186.0
-size_flags_horizontal = 3
+[node name="MarginContainer3" type="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox"]
+margin_right = 581.0
+margin_bottom = 666.0
 size_flags_vertical = 3
 
+[node name="Dinosaur3" type="Node2D" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox"]
+position = Vector2( -1170, 0 )
+
 [node name="Pedastal 3" type="TextureRect" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox"]
-margin_top = 190.0
-margin_right = 282.0
-margin_bottom = 440.0
+margin_top = 670.0
+margin_right = 581.0
+margin_bottom = 920.0
 texture = ExtResource( 1 )
 stretch_mode = 4
 __meta__ = {
@@ -102,9 +107,9 @@ __meta__ = {
 }
 
 [node name="R Margin" type="MarginContainer" parent="Margin/Pedastal Hbox"]
-margin_left = 862.0
-margin_right = 862.0
-margin_bottom = 440.0
+margin_left = 1759.0
+margin_right = 1759.0
+margin_bottom = 920.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
