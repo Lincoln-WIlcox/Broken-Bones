@@ -27,7 +27,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
-Dinosaur="res://Scripts/Dinosaur Class.gd"
 
 [display]
 
