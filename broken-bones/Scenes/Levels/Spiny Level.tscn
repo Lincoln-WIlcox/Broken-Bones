@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Levels/Seabuddy Level.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Mosasaurus/spiny_reference.png" type="Texture" id=5]
 [ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Dinosaur Parts.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Arms.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Head.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Legs.tscn" type="PackedScene" id=11]
@@ -158,7 +159,6 @@ custom_fonts/font = SubResource( 3 )
 step = 1.0
 value = 100.0
 script = ExtResource( 7 )
-puzzle_time = 100
 
 [node name="Build Area" type="ColorRect" parent="Margin/Main HBox/Middle VBox"]
 modulate = Color( 1, 1, 1, 0 )
@@ -203,30 +203,26 @@ size_flags_stretch_ratio = 0.75
 color = Color( 1, 0.866667, 0, 1 )
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
+script = ExtResource( 8 )
+random_parts_amount = 2
 
 [node name="Spiny Arms" parent="Dinosaur Parts" instance=ExtResource( 9 )]
 position = Vector2( 1629.24, 487.221 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Spiny Head" parent="Dinosaur Parts" instance=ExtResource( 10 )]
 position = Vector2( 1788.09, 188.883 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Spiny Legs" parent="Dinosaur Parts" instance=ExtResource( 11 )]
 position = Vector2( 1636.99, 260.562 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Spiny Neck" parent="Dinosaur Parts" instance=ExtResource( 12 )]
 position = Vector2( 1799.72, 741.971 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Spiny Ribs" parent="Dinosaur Parts" instance=ExtResource( 13 )]
 position = Vector2( 1666.05, 871.768 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Spiny Tail" parent="Dinosaur Parts" instance=ExtResource( 14 )]
 position = Vector2( 1729.01, 613.143 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Spiny Outline" type="Area2D" parent="."]
 
