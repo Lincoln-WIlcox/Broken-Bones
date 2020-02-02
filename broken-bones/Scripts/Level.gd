@@ -18,6 +18,8 @@ func _on_Submit_pressed():
 	
 	for part in dinosaur_parts:
 		part.position -= smallestvector2
+		
+	
 	
 	Global.add_dinosaur(Dinosaur.new(dinosaur_parts,$"Margin/Main HBox/Middle VBox/HBoxContainer/Name".text))
 	

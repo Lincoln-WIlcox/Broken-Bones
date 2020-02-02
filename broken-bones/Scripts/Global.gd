@@ -10,7 +10,7 @@ var build_materials = [
 ]
 
 var timer: Timer
-var puzzle_time := 10
+var puzzle_time := 80
 
 #to make sure window is placed correctly on build
 func _ready():
