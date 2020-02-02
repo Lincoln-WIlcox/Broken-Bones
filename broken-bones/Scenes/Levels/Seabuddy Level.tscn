@@ -1,20 +1,19 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Levels/Spiny Level.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Reference-Picture-Paper.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Trex/trex_reference.png" type="Texture" id=5]
-[ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=7]
-[ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=8]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Head.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Neck.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Ribs.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Arms.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Legs.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Tail.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Assets/Trex/trex_silhouette.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Reference-Picture-Paper.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Mosasaurus/spiny_reference.png" type="Texture" id=4]
+[ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Arms.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Head.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Legs.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Neck.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Ribs.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Tail.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Mosasaurus/spiny_silhouette.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -26,11 +25,13 @@ bg_color = Color( 0.396078, 0.266667, 0.145098, 1 )
 size = 24
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 6 )
+font_data = ExtResource( 5 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="DynamicFont" id=4]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="Animation" id=6]
 resource_name = "flash"
 length = 4.0
 tracks/0/type = "value"
@@ -53,18 +54,15 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-next_scene = ExtResource( 2 )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 1.01147
+margin_right = 1.01147
+texture = ExtResource( 2 )
 
 [node name="Margin" type="MarginContainer" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 20.0
@@ -85,6 +83,7 @@ size_flags_vertical = 3
 custom_constants/separation = 40
 
 [node name="Left VBox" type="VBoxContainer" parent="Margin/Main HBox"]
+editor/display_folded = true
 margin_right = 465.0
 margin_bottom = 1040.0
 rect_pivot_offset = Vector2( -144.37, 51.0713 )
@@ -124,12 +123,14 @@ color = Color( 1, 0, 0, 1 )
 [node name="Reference-Picture-Paper" type="Sprite" parent="Margin/Main HBox/Left VBox"]
 position = Vector2( 226.19, 519.576 )
 scale = Vector2( 1.37837, 1.54428 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
-[node name="trex_reference" type="Sprite" parent="Margin/Main HBox/Left VBox"]
-position = Vector2( 211.053, 320.752 )
-scale = Vector2( 0.357931, 0.357931 )
-texture = ExtResource( 5 )
+[node name="spiny_reference" type="Sprite" parent="Margin/Main HBox/Left VBox"]
+position = Vector2( 206.466, 281.627 )
+rotation = 0.244346
+scale = Vector2( 0.317729, 0.316348 )
+texture = ExtResource( 4 )
+flip_h = true
 
 [node name="Middle VBox" type="VBoxContainer" parent="Margin/Main HBox"]
 margin_left = 505.0
@@ -153,34 +154,35 @@ custom_styles/bg = SubResource( 2 )
 custom_fonts/font = SubResource( 3 )
 step = 1.0
 value = 100.0
-script = ExtResource( 7 )
+script = ExtResource( 6 )
 puzzle_time = 100
 
 [node name="Build Area" type="ColorRect" parent="Margin/Main HBox/Middle VBox"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 66.0
 margin_right = 868.0
-margin_bottom = 996.0
+margin_bottom = 1000.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Margin/Main HBox/Middle VBox"]
-margin_top = 1016.0
+margin_top = 1020.0
 margin_right = 868.0
 margin_bottom = 1040.0
 custom_constants/separation = 10
 
 [node name="Name" type="LineEdit" parent="Margin/Main HBox/Middle VBox/HBoxContainer"]
 margin_right = 715.0
-margin_bottom = 24.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
 placeholder_text = "Name"
 caret_blink = true
 
 [node name="Submit" type="Button" parent="Margin/Main HBox/Middle VBox/HBoxContainer"]
 margin_left = 725.0
 margin_right = 868.0
-margin_bottom = 24.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 text = "Submit"
@@ -196,54 +198,46 @@ size_flags_stretch_ratio = 0.75
 color = Color( 1, 0.866667, 0, 1 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 7 )
 autoplay = true
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
 
-[node name="Trex Head" parent="Dinosaur Parts" instance=ExtResource( 9 )]
-position = Vector2( 1669, 259.677 )
+[node name="Spiny Arms" parent="Dinosaur Parts" instance=ExtResource( 8 )]
+position = Vector2( 1629.24, 487.221 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 25, 50 )
 
-[node name="Trex Neck" parent="Dinosaur Parts" instance=ExtResource( 10 )]
-position = Vector2( 1661.75, 760.445 )
+[node name="Spiny Head" parent="Dinosaur Parts" instance=ExtResource( 9 )]
+position = Vector2( 1788.09, 188.883 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 10, 14 )
 
-[node name="Trex Ribs" parent="Dinosaur Parts" instance=ExtResource( 11 )]
-position = Vector2( 1781.75, 603.597 )
+[node name="Spiny Legs" parent="Dinosaur Parts" instance=ExtResource( 10 )]
+position = Vector2( 1636.99, 260.562 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 45, 40 )
 
-[node name="Trex Arms" parent="Dinosaur Parts" instance=ExtResource( 12 )]
-position = Vector2( 1760.17, 438.843 )
+[node name="Spiny Neck" parent="Dinosaur Parts" instance=ExtResource( 11 )]
+position = Vector2( 1799.72, 741.971 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 10, 20 )
 
-[node name="Trex Legs" parent="Dinosaur Parts" instance=ExtResource( 13 )]
-position = Vector2( 1576.16, 592.992 )
+[node name="Spiny Ribs" parent="Dinosaur Parts" instance=ExtResource( 12 )]
+position = Vector2( 1666.05, 871.768 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 30, 100 )
 
-[node name="Trex Tail" parent="Dinosaur Parts" instance=ExtResource( 14 )]
-position = Vector2( 1721.65, 880.977 )
+[node name="Spiny Tail" parent="Dinosaur Parts" instance=ExtResource( 13 )]
+position = Vector2( 1729.01, 613.143 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 50, 35 )
 
-[node name="Trex Outline" type="Area2D" parent="."]
-position = Vector2( 1, 0 )
+[node name="Spiny Outline" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trex Outline"]
-shape = SubResource( 4 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spiny Outline"]
+shape = SubResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="Trex Outline"]
+[node name="Sprite" type="Sprite" parent="Spiny Outline"]
 position = Vector2( 1034.41, 548.768 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Trex Outline"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Spiny Outline"]
 autoplay = "flash"
-playback_speed = 1.75
-anims/flash = SubResource( 5 )
+anims/flash = SubResource( 6 )
 [connection signal="pressed" from="Margin/Main HBox/Middle VBox/HBoxContainer/Submit" to="." method="_on_Submit_pressed"]
