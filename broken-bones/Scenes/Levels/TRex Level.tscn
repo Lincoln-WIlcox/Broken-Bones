@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Scenes/Build Materials/Trex/Trex Arms.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Build Materials/Trex/Trex Legs.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Build Materials/Trex/Trex Tail.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Trex/trex_silhouette.png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Game UI Container" type="Control"]
 anchor_right = 1.0
@@ -170,4 +173,14 @@ selection_variance = Vector2( 30, 100 )
 position = Vector2( 1721.65, 880.977 )
 scale = Vector2( 0.5, 0.5 )
 selection_variance = Vector2( 50, 35 )
+
+[node name="Trex Outline" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trex Outline"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Trex Outline"]
+position = Vector2( 1034.41, 548.768 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
 [connection signal="pressed" from="Margin/Main HBox/Middle VBox/HBoxContainer/Submit" to="." method="_on_Submit_pressed"]
