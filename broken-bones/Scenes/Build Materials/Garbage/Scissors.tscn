@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Misc Objects/Scissors.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Build Materials/Build Material.tscn" type="PackedScene" id=2]
+
+[node name="Scissors" instance=ExtResource( 2 )]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )

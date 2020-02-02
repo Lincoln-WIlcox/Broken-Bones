@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Levels/Spiny Level.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Trex/trex_reference.png" type="Texture" id=5]
 [ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Dinosaur Parts.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/Build Materials/Trex/Trex Head.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Build Materials/Trex/Trex Neck.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Build Materials/Trex/Trex Ribs.tscn" type="PackedScene" id=11]
@@ -200,6 +201,7 @@ size_flags_stretch_ratio = 0.75
 color = Color( 1, 0.866667, 0, 1 )
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
+script = ExtResource( 8 )
 
 [node name="Trex Head" parent="Dinosaur Parts" instance=ExtResource( 9 )]
 position = Vector2( 1669, 259.677 )
