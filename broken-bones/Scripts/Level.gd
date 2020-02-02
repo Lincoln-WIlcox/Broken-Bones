@@ -9,7 +9,7 @@ func _on_Submit_pressed():
 		if part in $"Build Area".get_overlapping_areas():
 			dinosaur_parts.append(part.duplicate())
 	
-	var smallestvector2 = dinosaur_parts[0].position
+	var smallestvector2 = dinosaur_parts[0].position if dinosaur_parts else null
 	
 	for part in dinosaur_parts:
 		if part.position.x < smallestvector2.x:

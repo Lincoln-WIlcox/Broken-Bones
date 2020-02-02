@@ -53,6 +53,7 @@ tracks/0/keys = {
 extents = Vector2( 516.496, 425.593 )
 
 [node name="Game UI Container" type="Control"]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -70,6 +71,7 @@ __meta__ = {
 }
 
 [node name="Margin" type="MarginContainer" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 20.0
