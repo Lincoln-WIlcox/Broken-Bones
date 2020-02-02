@@ -22,4 +22,4 @@ func _on_Submit_pressed():
 	Global.add_dinosaur(Dinosaur.new(dinosaur_parts))
 	
 	if Global.dinosaurs.size() == 3:
-		get_tree().change_scene("res://Scenes/Trophy Room.tscn")
+		get_tree().change_scene("res://Scenes/Game Over Screen.tscn")

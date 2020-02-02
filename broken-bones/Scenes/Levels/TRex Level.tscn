@@ -1,25 +1,15 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=3]
-[ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Head.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Neck.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Ribs.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Arms.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Legs.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Tail.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/Trex/trex_silhouette.png" type="Texture" id=11]
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 1, 1, 1, 1 )
-border_width_top = 10
-border_width_bottom = 10
-shadow_color = Color( 0, 0, 0, 0 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.435294, 0.215686, 0.0666667, 1 )
+[ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Scenes/Build Materials/Trex/Trex Head.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Build Materials/Trex/Trex Neck.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Build Materials/Trex/Trex Ribs.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Build Materials/Trex/Trex Arms.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Build Materials/Trex/Trex Legs.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Build Materials/Trex/Trex Tail.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Trex/trex_silhouette.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -107,20 +97,11 @@ margin_right = 868.0
 [node name="Timer" type="ProgressBar" parent="Margin/Main HBox/Middle VBox"]
 margin_top = 20.0
 margin_right = 868.0
-margin_bottom = 40.0
-custom_styles/fg = SubResource( 2 )
-custom_styles/bg = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-step = 1.0
-value = 100.0
-percent_visible = false
-script = ExtResource( 3 )
-puzzle_time = 10
+margin_bottom = 34.0
 
 [node name="Build Area" type="ColorRect" parent="Margin/Main HBox/Middle VBox"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 60.0
+margin_top = 54.0
 margin_right = 868.0
 margin_bottom = 996.0
 size_flags_horizontal = 3
@@ -158,37 +139,37 @@ size_flags_stretch_ratio = 0.75
 color = Color( 1, 0.866667, 0, 1 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 3 )
 autoplay = true
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
 
-[node name="Trex Head" parent="Dinosaur Parts" instance=ExtResource( 5 )]
+[node name="Trex Head" parent="Dinosaur Parts" instance=ExtResource( 4 )]
 position = Vector2( 1669, 259.677 )
 scale = Vector2( 0.5, 0.5 )
 selection_variance = Vector2( 25, 50 )
 
-[node name="Trex Neck" parent="Dinosaur Parts" instance=ExtResource( 6 )]
+[node name="Trex Neck" parent="Dinosaur Parts" instance=ExtResource( 5 )]
 position = Vector2( 1661.75, 760.445 )
 scale = Vector2( 0.5, 0.5 )
 selection_variance = Vector2( 10, 14 )
 
-[node name="Trex Ribs" parent="Dinosaur Parts" instance=ExtResource( 7 )]
+[node name="Trex Ribs" parent="Dinosaur Parts" instance=ExtResource( 6 )]
 position = Vector2( 1781.75, 603.597 )
 scale = Vector2( 0.5, 0.5 )
 selection_variance = Vector2( 45, 40 )
 
-[node name="Trex Arms" parent="Dinosaur Parts" instance=ExtResource( 8 )]
+[node name="Trex Arms" parent="Dinosaur Parts" instance=ExtResource( 7 )]
 position = Vector2( 1760.17, 438.843 )
 scale = Vector2( 0.5, 0.5 )
 selection_variance = Vector2( 10, 20 )
 
-[node name="Trex Legs" parent="Dinosaur Parts" instance=ExtResource( 9 )]
+[node name="Trex Legs" parent="Dinosaur Parts" instance=ExtResource( 8 )]
 position = Vector2( 1576.16, 592.992 )
 scale = Vector2( 0.5, 0.5 )
 selection_variance = Vector2( 30, 100 )
 
-[node name="Trex Tail" parent="Dinosaur Parts" instance=ExtResource( 10 )]
+[node name="Trex Tail" parent="Dinosaur Parts" instance=ExtResource( 9 )]
 position = Vector2( 1721.65, 880.977 )
 scale = Vector2( 0.5, 0.5 )
 selection_variance = Vector2( 50, 35 )
@@ -201,5 +182,5 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="Trex Outline"]
 position = Vector2( 1034.41, 548.768 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 [connection signal="pressed" from="Margin/Main HBox/Middle VBox/HBoxContainer/Submit" to="." method="_on_Submit_pressed"]
