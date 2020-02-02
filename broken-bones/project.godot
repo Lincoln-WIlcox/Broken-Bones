@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="broken-bones"
-run/main_scene="res://Scenes/Levels/TRex Level.tscn"
+run/main_scene="res://Scenes/Title Screen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

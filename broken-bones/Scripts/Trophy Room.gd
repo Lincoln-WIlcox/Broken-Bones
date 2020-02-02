@@ -23,6 +23,10 @@ $"Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3/MarginContainer3/L
 
 func _ready():
 	
+	
+	if rand_range(0,2) > 1:
+		$"Space Background".visible = false
+	
 	for spotindex in range(dinospots.size()):
 		dinospots[spotindex].position = margincontainers[spotindex].get_position()
 	

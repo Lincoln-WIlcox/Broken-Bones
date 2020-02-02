@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Trophy Room.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Backgrounds/Office-Without-Pedestals.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Pedestal.png" type="Texture" id=3]
 [ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Backgrounds/Space-Without-Pedestals.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -23,6 +24,11 @@ __meta__ = {
 position = Vector2( 961.586, 544.416 )
 texture = ExtResource( 2 )
 
+[node name="Space Background" type="Sprite" parent="."]
+position = Vector2( 0, -4.05312e-06 )
+texture = ExtResource( 5 )
+centered = false
+
 [node name="Margin" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -37,7 +43,6 @@ __meta__ = {
 }
 
 [node name="Pedastal Hbox" type="HBoxContainer" parent="Margin"]
-editor/display_folded = true
 margin_right = 1760.0
 margin_bottom = 920.0
 

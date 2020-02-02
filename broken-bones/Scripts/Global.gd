@@ -10,19 +10,19 @@ var build_materials = [
 ]
 
 var timer: Timer
-var puzzle_time := 80
+var puzzle_time := 10
 
 #to make sure window is placed correctly on build
 func _ready():
 	randomize()
 	
-	OS.set_window_position(Vector2())
-	
 	timer = Timer.new()
 	timer.connect("timeout",self,"_on_timer_timeout")
 	timer.set_one_shot(true)
 	add_child(timer)
-	timer.start(puzzle_time)
+	
+	OS.set_window_position(Vector2())
+	
 
 
 func add_dinosaur(dinosaur):
@@ -30,7 +30,10 @@ func add_dinosaur(dinosaur):
 		dinosaurs.remove(0)
 	dinosaurs.append(dinosaur)
 
-
 func _on_timer_timeout():
 	get_tree().change_scene("res://Scenes/Game Over Screen.tscn")
 	
+
+func start_game():
+	get_tree().change_scene("res://Scenes/Levels/TRex Level.tscn")
+	timer.start(puzzle_time)
