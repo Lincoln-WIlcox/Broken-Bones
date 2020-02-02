@@ -1,19 +1,19 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Reference-Picture-Paper.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Trex/trex_reference.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Mosasaurus/spiny_reference.png" type="Texture" id=4]
 [ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Head.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Neck.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Ribs.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Arms.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Legs.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Build Materials/Trex/Trex Tail.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Assets/Trex/trex_silhouette.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Arms.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Head.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Legs.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Neck.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Ribs.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Tail.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Mosasaurus/spiny_silhouette.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -27,10 +27,11 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
+[sub_resource type="DynamicFont" id=5]
+
 [sub_resource type="RectangleShape2D" id=4]
 
 [node name="Game UI Container" type="Control"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -41,6 +42,8 @@ __meta__ = {
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.01147
+margin_right = 1.01147
 texture = ExtResource( 2 )
 
 [node name="Margin" type="MarginContainer" parent="."]
@@ -64,6 +67,7 @@ size_flags_vertical = 3
 custom_constants/separation = 40
 
 [node name="Left VBox" type="VBoxContainer" parent="Margin/Main HBox"]
+editor/display_folded = true
 margin_right = 465.0
 margin_bottom = 1040.0
 rect_pivot_offset = Vector2( -144.37, 51.0713 )
@@ -105,10 +109,12 @@ position = Vector2( 226.19, 519.576 )
 scale = Vector2( 1.37837, 1.54428 )
 texture = ExtResource( 3 )
 
-[node name="trex_reference" type="Sprite" parent="Margin/Main HBox/Left VBox"]
-position = Vector2( 211.053, 320.752 )
-scale = Vector2( 0.357931, 0.357931 )
+[node name="spiny_reference" type="Sprite" parent="Margin/Main HBox/Left VBox"]
+position = Vector2( 206.466, 281.627 )
+rotation = 0.244346
+scale = Vector2( 0.317729, 0.316348 )
 texture = ExtResource( 4 )
+flip_h = true
 
 [node name="Middle VBox" type="VBoxContainer" parent="Margin/Main HBox"]
 margin_left = 505.0
@@ -144,7 +150,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Margin/Main HBox/Middle VBox"]
-editor/display_folded = true
 margin_top = 1016.0
 margin_right = 868.0
 margin_bottom = 1040.0
@@ -154,6 +159,7 @@ custom_constants/separation = 10
 margin_right = 715.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 5 )
 placeholder_text = "Name"
 caret_blink = true
 
@@ -180,37 +186,30 @@ stream = ExtResource( 7 )
 autoplay = true
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="Trex Head" parent="Dinosaur Parts" instance=ExtResource( 8 )]
-position = Vector2( 1669, 259.677 )
+[node name="Spiny Arms" parent="Dinosaur Parts" instance=ExtResource( 8 )]
+position = Vector2( 1629.24, 487.221 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 25, 50 )
 
-[node name="Trex Neck" parent="Dinosaur Parts" instance=ExtResource( 9 )]
-position = Vector2( 1661.75, 760.445 )
+[node name="Spiny Head" parent="Dinosaur Parts" instance=ExtResource( 9 )]
+position = Vector2( 1788.09, 188.883 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 10, 14 )
 
-[node name="Trex Ribs" parent="Dinosaur Parts" instance=ExtResource( 10 )]
-position = Vector2( 1781.75, 603.597 )
+[node name="Spiny Legs" parent="Dinosaur Parts" instance=ExtResource( 10 )]
+position = Vector2( 1636.99, 260.562 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 45, 40 )
 
-[node name="Trex Arms" parent="Dinosaur Parts" instance=ExtResource( 11 )]
-position = Vector2( 1760.17, 438.843 )
+[node name="Spiny Neck" parent="Dinosaur Parts" instance=ExtResource( 11 )]
+position = Vector2( 1799.72, 741.971 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 10, 20 )
 
-[node name="Trex Legs" parent="Dinosaur Parts" instance=ExtResource( 12 )]
-position = Vector2( 1576.16, 592.992 )
+[node name="Spiny Ribs" parent="Dinosaur Parts" instance=ExtResource( 12 )]
+position = Vector2( 1666.05, 871.768 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 30, 100 )
 
-[node name="Trex Tail" parent="Dinosaur Parts" instance=ExtResource( 13 )]
-position = Vector2( 1721.65, 880.977 )
+[node name="Spiny Tail" parent="Dinosaur Parts" instance=ExtResource( 13 )]
+position = Vector2( 1729.01, 613.143 )
 scale = Vector2( 0.5, 0.5 )
-selection_variance = Vector2( 50, 35 )
 
 [node name="Trex Outline" type="Area2D" parent="."]
 
