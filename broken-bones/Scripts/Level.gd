@@ -22,6 +22,6 @@ func _on_Submit_pressed():
 	Global.add_dinosaur(Dinosaur.new(dinosaur_parts,$"Margin/Main HBox/Middle VBox/HBoxContainer/Name".text))
 	
 	if Global.dinosaurs.size() == 3:
-		get_tree().change_scene("res://Scenes/Game Over Screen.tscn")
+		get_tree().change_scene("res://Scenes/Trophy Room.tscn")
 	elif next_scene:
 		get_tree().change_scene_to(next_scene)

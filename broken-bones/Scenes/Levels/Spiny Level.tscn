@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Levels/Seabuddy Level.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Assets/Mosasaurus/spiny_reference.png" type="Texture" id=5]
 [ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=7]
-[ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Arms.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Head.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Legs.tscn" type="PackedScene" id=11]
@@ -198,10 +197,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
 color = Color( 1, 0.866667, 0, 1 )
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
-autoplay = true
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
 

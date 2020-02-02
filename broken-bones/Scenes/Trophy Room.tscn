@@ -85,12 +85,12 @@ margin_left = 233.0
 margin_right = 347.0
 margin_bottom = 400.0
 size_flags_horizontal = 3
-custom_constants/margin_top = 120
+custom_constants/margin_top = 125
 
 [node name="Label" type="Label" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer4/Hbox2/MarginContainer3"]
-margin_top = 120.0
+margin_top = 125.0
 margin_right = 114.0
-margin_bottom = 167.0
+margin_bottom = 172.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.4
@@ -156,12 +156,12 @@ margin_left = 233.0
 margin_right = 347.0
 margin_bottom = 400.0
 size_flags_horizontal = 3
-custom_constants/margin_top = 120
+custom_constants/margin_top = 125
 
 [node name="Label" type="Label" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox/MarginContainer3/Hbox2/MarginContainer3"]
-margin_top = 120.0
+margin_top = 125.0
 margin_right = 114.0
-margin_bottom = 167.0
+margin_bottom = 172.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.4
@@ -227,12 +227,12 @@ margin_left = 233.0
 margin_right = 347.0
 margin_bottom = 400.0
 size_flags_horizontal = 3
-custom_constants/margin_top = 120
+custom_constants/margin_top = 125
 
 [node name="Label" type="Label" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3/MarginContainer3"]
-margin_top = 120.0
+margin_top = 125.0
 margin_right = 114.0
-margin_bottom = 167.0
+margin_bottom = 172.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.4
