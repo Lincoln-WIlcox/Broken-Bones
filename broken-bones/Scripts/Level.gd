@@ -6,7 +6,8 @@ func _on_Submit_pressed():
 	var dinosaur_parts = []
 	
 	for part in $"Dinosaur Parts".get_children():
-		dinosaur_parts.append(part.duplicate())
+		if part in $"Build Area".get_overlapping_areas():
+			dinosaur_parts.append(part.duplicate())
 	
 	var smallestvector2 = dinosaur_parts[0].position
 	

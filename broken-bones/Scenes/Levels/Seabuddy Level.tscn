@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=2]
@@ -48,6 +48,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 486.69, 439.907 )
 
 [node name="Game UI Container" type="Control"]
 anchor_right = 1.0
@@ -232,4 +235,13 @@ texture = ExtResource( 14 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Seabuddy Outline"]
 autoplay = "flash"
 anims/flash = SubResource( 6 )
+
+[node name="Build Area" type="Area2D" parent="."]
+position = Vector2( 1033.6, 558.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Build Area"]
+shape = SubResource( 7 )
 [connection signal="pressed" from="Margin/Main HBox/Middle VBox/HBoxContainer/Submit" to="." method="_on_Submit_pressed"]
