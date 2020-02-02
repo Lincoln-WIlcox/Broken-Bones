@@ -3,17 +3,17 @@
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Reference-Picture-Paper.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Mosasaurus/spiny_reference.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sea Buddy/seabuddy_reference.png" type="Texture" id=4]
 [ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Arms.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Head.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Legs.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Neck.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Ribs.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Tail.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Assets/Mosasaurus/spiny_silhouette.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Build Materials/Seabuddy/Seabuddy Arms.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Build Materials/Seabuddy/Seabuddy Head.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Build Materials/Seabuddy/Seabuddy Legs.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Build Materials/Seabuddy/Seabuddy Neck.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Build Materials/Seabuddy/Seabuddy Ribs.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Build Materials/Seabuddy/Seabuddy Tail.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Sea Buddy/seabuddy_silhouette.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -83,7 +83,6 @@ size_flags_vertical = 3
 custom_constants/separation = 40
 
 [node name="Left VBox" type="VBoxContainer" parent="Margin/Main HBox"]
-editor/display_folded = true
 margin_right = 465.0
 margin_bottom = 1040.0
 rect_pivot_offset = Vector2( -144.37, 51.0713 )
@@ -126,11 +125,9 @@ scale = Vector2( 1.37837, 1.54428 )
 texture = ExtResource( 3 )
 
 [node name="spiny_reference" type="Sprite" parent="Margin/Main HBox/Left VBox"]
-position = Vector2( 206.466, 281.627 )
-rotation = 0.244346
-scale = Vector2( 0.317729, 0.316348 )
+position = Vector2( 207.997, 312.563 )
+scale = Vector2( 0.390713, 0.389015 )
 texture = ExtResource( 4 )
-flip_h = true
 
 [node name="Middle VBox" type="VBoxContainer" parent="Margin/Main HBox"]
 margin_left = 505.0
@@ -203,41 +200,41 @@ autoplay = true
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
 
-[node name="Spiny Arms" parent="Dinosaur Parts" instance=ExtResource( 8 )]
-position = Vector2( 1629.24, 487.221 )
+[node name="Seabuddy Arms" parent="Dinosaur Parts" instance=ExtResource( 8 )]
+position = Vector2( 1834.83, 507.625 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Head" parent="Dinosaur Parts" instance=ExtResource( 9 )]
-position = Vector2( 1788.09, 188.883 )
+[node name="Seabuddy Head" parent="Dinosaur Parts" instance=ExtResource( 9 )]
+position = Vector2( 1762.15, 893.376 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Legs" parent="Dinosaur Parts" instance=ExtResource( 10 )]
-position = Vector2( 1636.99, 260.562 )
+[node name="Seabuddy Legs" parent="Dinosaur Parts" instance=ExtResource( 10 )]
+position = Vector2( 1673.82, 601.547 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Neck" parent="Dinosaur Parts" instance=ExtResource( 11 )]
-position = Vector2( 1799.72, 741.971 )
+[node name="Seabuddy Neck" parent="Dinosaur Parts" instance=ExtResource( 11 )]
+position = Vector2( 1653.69, 500.916 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Ribs" parent="Dinosaur Parts" instance=ExtResource( 12 )]
-position = Vector2( 1666.05, 871.768 )
+[node name="Seabuddy Ribs" parent="Dinosaur Parts" instance=ExtResource( 12 )]
+position = Vector2( 1745.38, 212.442 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Tail" parent="Dinosaur Parts" instance=ExtResource( 13 )]
-position = Vector2( 1729.01, 613.143 )
+[node name="Seabuddy Tail" parent="Dinosaur Parts" instance=ExtResource( 13 )]
+position = Vector2( 1753.21, 372.333 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Outline" type="Area2D" parent="."]
+[node name="Seabuddy Outline" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spiny Outline"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Seabuddy Outline"]
 shape = SubResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="Spiny Outline"]
+[node name="Sprite" type="Sprite" parent="Seabuddy Outline"]
 position = Vector2( 1034.41, 548.768 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 14 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Spiny Outline"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Seabuddy Outline"]
 autoplay = "flash"
 anims/flash = SubResource( 6 )
 [connection signal="pressed" from="Margin/Main HBox/Middle VBox/HBoxContainer/Submit" to="." method="_on_Submit_pressed"]

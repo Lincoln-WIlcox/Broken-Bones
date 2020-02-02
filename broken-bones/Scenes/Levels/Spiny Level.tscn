@@ -1,19 +1,20 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Reference-Picture-Paper.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Mosasaurus/spiny_reference.png" type="Texture" id=4]
-[ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=6]
-[ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Arms.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Head.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Legs.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Neck.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Ribs.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Tail.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Assets/Mosasaurus/spiny_silhouette.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Levels/Seabuddy Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Broken-Bones-Workdesk.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Reference-Picture-Paper.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Mosasaurus/spiny_reference.png" type="Texture" id=5]
+[ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Arms.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Head.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Legs.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Neck.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Ribs.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Build Materials/Mosasaurus/Spiny Tail.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Mosasaurus/spiny_silhouette.png" type="Texture" id=15]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -25,7 +26,7 @@ bg_color = Color( 0.396078, 0.266667, 0.145098, 1 )
 size = 24
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
 
@@ -50,17 +51,19 @@ tracks/0/keys = {
 [node name="Game UI Container" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_scale = Vector2( 1, 1.00376 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+next_scene = ExtResource( 2 )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.01147
 margin_right = 1.01147
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Margin" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -123,13 +126,13 @@ color = Color( 1, 0, 0, 1 )
 [node name="Reference-Picture-Paper" type="Sprite" parent="Margin/Main HBox/Left VBox"]
 position = Vector2( 226.19, 519.576 )
 scale = Vector2( 1.37837, 1.54428 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="spiny_reference" type="Sprite" parent="Margin/Main HBox/Left VBox"]
 position = Vector2( 206.466, 281.627 )
 rotation = 0.244346
 scale = Vector2( 0.317729, 0.316348 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 flip_h = true
 
 [node name="Middle VBox" type="VBoxContainer" parent="Margin/Main HBox"]
@@ -154,7 +157,7 @@ custom_styles/bg = SubResource( 2 )
 custom_fonts/font = SubResource( 3 )
 step = 1.0
 value = 100.0
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 puzzle_time = 100
 
 [node name="Build Area" type="ColorRect" parent="Margin/Main HBox/Middle VBox"]
@@ -198,32 +201,32 @@ size_flags_stretch_ratio = 0.75
 color = Color( 1, 0.866667, 0, 1 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 8 )
 autoplay = true
 
 [node name="Dinosaur Parts" type="Node2D" parent="."]
 
-[node name="Spiny Arms" parent="Dinosaur Parts" instance=ExtResource( 8 )]
+[node name="Spiny Arms" parent="Dinosaur Parts" instance=ExtResource( 9 )]
 position = Vector2( 1629.24, 487.221 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Head" parent="Dinosaur Parts" instance=ExtResource( 9 )]
+[node name="Spiny Head" parent="Dinosaur Parts" instance=ExtResource( 10 )]
 position = Vector2( 1788.09, 188.883 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Legs" parent="Dinosaur Parts" instance=ExtResource( 10 )]
+[node name="Spiny Legs" parent="Dinosaur Parts" instance=ExtResource( 11 )]
 position = Vector2( 1636.99, 260.562 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Neck" parent="Dinosaur Parts" instance=ExtResource( 11 )]
+[node name="Spiny Neck" parent="Dinosaur Parts" instance=ExtResource( 12 )]
 position = Vector2( 1799.72, 741.971 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Ribs" parent="Dinosaur Parts" instance=ExtResource( 12 )]
+[node name="Spiny Ribs" parent="Dinosaur Parts" instance=ExtResource( 13 )]
 position = Vector2( 1666.05, 871.768 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Spiny Tail" parent="Dinosaur Parts" instance=ExtResource( 13 )]
+[node name="Spiny Tail" parent="Dinosaur Parts" instance=ExtResource( 14 )]
 position = Vector2( 1729.01, 613.143 )
 scale = Vector2( 0.5, 0.5 )
 
@@ -235,7 +238,7 @@ shape = SubResource( 5 )
 [node name="Sprite" type="Sprite" parent="Spiny Outline"]
 position = Vector2( 1034.41, 548.768 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Spiny Outline"]
 autoplay = "flash"
