@@ -2,7 +2,9 @@
 
 [ext_resource path="res://Scripts/Build Material.gd" type="Script" id=1]
 
-[node name="Build Material" type="Area2D"]
+[node name="Build Material" type="Area2D" groups=[
+"Part",
+]]
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
