@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bbt.ogg-428d5d2a1d3f244edf61a141dbb415df.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/bbt.ogg"
+dest_files=[ "res://.import/bbt.ogg-428d5d2a1d3f244edf61a141dbb415df.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=11.009
