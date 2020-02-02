@@ -31,32 +31,32 @@ __meta__ = {
 }
 
 [node name="Main HBox" type="HBoxContainer" parent="Margin"]
-margin_right = 984.0
-margin_bottom = 560.0
+margin_right = 1880.0
+margin_bottom = 1040.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 40
 
 [node name="Left VBox" type="VBoxContainer" parent="Margin/Main HBox"]
-margin_right = 233.0
-margin_bottom = 560.0
+margin_right = 465.0
+margin_bottom = 1040.0
 rect_pivot_offset = Vector2( -144.37, 51.0713 )
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.75
 custom_constants/separation = 10
 
 [node name="Strikes Box" type="ColorRect" parent="Margin/Main HBox/Left VBox"]
-margin_right = 233.0
-margin_bottom = 83.0
+margin_right = 465.0
+margin_bottom = 156.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.4
 color = Color( 1, 0, 0, 1 )
 
 [node name="Margin" type="MarginContainer" parent="Margin/Main HBox/Left VBox"]
-margin_top = 93.0
-margin_right = 233.0
-margin_bottom = 134.0
+margin_top = 166.0
+margin_right = 465.0
+margin_bottom = 244.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 __meta__ = {
@@ -64,18 +64,18 @@ __meta__ = {
 }
 
 [node name="Other Thing That Goes There" type="ColorRect" parent="Margin/Main HBox/Left VBox"]
-margin_top = 144.0
-margin_right = 233.0
-margin_bottom = 560.0
+margin_top = 254.0
+margin_right = 465.0
+margin_bottom = 1040.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 color = Color( 1, 0, 0, 1 )
 
 [node name="Middle VBox" type="VBoxContainer" parent="Margin/Main HBox"]
-margin_left = 273.0
-margin_right = 709.0
-margin_bottom = 560.0
+margin_left = 505.0
+margin_right = 1373.0
+margin_bottom = 1040.0
 rect_pivot_offset = Vector2( -144.37, 51.0713 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -83,48 +83,49 @@ size_flags_stretch_ratio = 1.4
 custom_constants/separation = 20
 
 [node name="Margin" type="MarginContainer" parent="Margin/Main HBox/Middle VBox"]
-margin_right = 436.0
+margin_right = 868.0
 
 [node name="Timer" type="ProgressBar" parent="Margin/Main HBox/Middle VBox"]
 margin_top = 20.0
-margin_right = 436.0
+margin_right = 868.0
 margin_bottom = 34.0
 step = 1.0
 value = 100.0
 script = ExtResource( 1 )
+puzzle_time = 10
 
 [node name="Build Area" type="ColorRect" parent="Margin/Main HBox/Middle VBox"]
 margin_top = 54.0
-margin_right = 436.0
-margin_bottom = 516.0
+margin_right = 868.0
+margin_bottom = 996.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Margin/Main HBox/Middle VBox"]
-margin_top = 536.0
-margin_right = 436.0
-margin_bottom = 560.0
+margin_top = 1016.0
+margin_right = 868.0
+margin_bottom = 1040.0
 custom_constants/separation = 10
 
 [node name="Name" type="LineEdit" parent="Margin/Main HBox/Middle VBox/HBoxContainer"]
-margin_right = 355.0
+margin_right = 715.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 placeholder_text = "Name"
 caret_blink = true
 
 [node name="Submit" type="Button" parent="Margin/Main HBox/Middle VBox/HBoxContainer"]
-margin_left = 365.0
-margin_right = 436.0
+margin_left = 725.0
+margin_right = 868.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 text = "Submit"
 
 [node name="Bones Area" type="ColorRect" parent="Margin/Main HBox"]
-margin_left = 749.0
-margin_right = 984.0
-margin_bottom = 560.0
+margin_left = 1413.0
+margin_right = 1880.0
+margin_bottom = 1040.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75

@@ -1,18 +1,18 @@
 extends ProgressBar
 
-var timer
+var timer: Timer
+export var puzzle_time: int
 
 func _ready() -> void:
 	timer = Timer.new()
-	timer.connect("timeout",self,"_on_timer_timeout") 
-	#timeout is what says in docs, in signals
-	#self is who respond to the callback
-	#_on_timer_timeout is the callback, can have any name
-	add_child(timer) #to process
-	timer.start(10) #to start
+	timer.connect("timeout",self,"_on_timer_timeout")
+	timer.set_one_shot(true)
+	add_child(timer)
+	timer.start(puzzle_time)
 	
 	
-func _process(delta: float) -> void:s
+func _process(delta: float) -> void:
+	self.value = (timer.time_left / puzzle_time) * 100
 
 
 func _on_timer_timeout():

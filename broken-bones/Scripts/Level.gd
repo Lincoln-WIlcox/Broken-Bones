@@ -8,4 +8,4 @@ func _on_Submit_pressed():
 	for part in $"Dinosaur Parts".get_children():
 		dinosaur_parts.append(part.duplicate())
 	
-	Global.add_dinosaur(Dinosaur.new())
+	Global.add_dinosaur(Dinosaur.new(dinosaur_parts))
