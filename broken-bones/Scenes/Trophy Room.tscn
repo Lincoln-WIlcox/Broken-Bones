@@ -2,13 +2,13 @@
 
 [ext_resource path="res://Scripts/Trophy Room.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Backgrounds/Office-Without-Pedestals.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Pedestal.png" type="Texture" id=3]
-[ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Assets/Backgrounds/Space-Without-Pedestals.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Backgrounds/Space-Without-Pedestals.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Pedestal.png" type="Texture" id=4]
+[ext_resource path="res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 
 [node name="Trophy Room" type="Control"]
 anchor_right = 1.0
@@ -26,7 +26,7 @@ texture = ExtResource( 2 )
 
 [node name="Space Background" type="Sprite" parent="."]
 position = Vector2( 0, -4.05312e-06 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 centered = false
 
 [node name="Margin" type="MarginContainer" parent="."]
@@ -75,7 +75,7 @@ margin_bottom = 920.0
 margin_right = 581.0
 margin_bottom = 400.0
 size_flags_vertical = 0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
@@ -146,7 +146,7 @@ margin_bottom = 920.0
 margin_right = 581.0
 margin_bottom = 400.0
 size_flags_vertical = 0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
@@ -217,7 +217,7 @@ margin_bottom = 920.0
 margin_right = 581.0
 margin_bottom = 400.0
 size_flags_vertical = 0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
