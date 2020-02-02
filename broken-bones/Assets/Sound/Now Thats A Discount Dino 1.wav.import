@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Now Thats A Discount Dino 1.wav-be7e9f13a87b890b6be798d7d28dfb7f.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/Now Thats A Discount Dino 1.wav"
+dest_files=[ "res://.import/Now Thats A Discount Dino 1.wav-be7e9f13a87b890b6be798d7d28dfb7f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
