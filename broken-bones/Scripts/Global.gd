@@ -34,6 +34,8 @@ var build_materials = [
 "res://Scenes/Build Materials/Garbage/Dragonball.tscn",
 "res://Scenes/Build Materials/Garbage/Robot Arm.tscn",
 "res://Scenes/Build Materials/Garbage/Swordfish.tscn",
+"res://Scenes/Build Materials/Garbage/ok.tscn",
+"res://Scenes/Build Materials/Garbage/Lightsaber.tscn",
 ]
 
 var voicelines = [
