@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Sound/Dino-Mite 1.wav" type="AudioStream" id=2]
 
-[node name="Music" type="AudioStreamPlayer"]
+[node name="Music" type="Node"]
+
+[node name="Dino-Mite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 autoplay = true

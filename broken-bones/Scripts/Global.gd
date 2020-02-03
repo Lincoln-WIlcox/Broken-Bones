@@ -36,6 +36,15 @@ var build_materials = [
 "res://Scenes/Build Materials/Garbage/Swordfish.tscn",
 ]
 
+var voicelines = [
+"res://Assets/Sound/Dino-Mite 1.wav",
+"res://Assets/Sound/Now Thats A Discount Dino 1.wav",
+"res://Assets/Sound/Now Thats A Discount Dino 2.wav",
+"res://Assets/Sound/Sticks n Stones.wav",
+"res://Assets/Sound/Yawn thats a good dino.wav",
+"res://Assets/Sound/Eating.wav",
+]
+
 var timer: Timer
 var puzzle_time := 80
 
@@ -60,6 +69,10 @@ func add_dinosaur(dinosaur):
 func _on_timer_timeout():
 	get_tree().change_scene("res://Scenes/Game Over Screen.tscn")
 	
+
+func play_voiceline():
+	Music.get_node("Dino-Mite").stream = load(voicelines[rand_range(0,voicelines.size())])
+	Music.get_node("Dino-Mite").play()
 
 func start_game():
 	get_tree().change_scene("res://Scenes/Levels/TRex Level.tscn")

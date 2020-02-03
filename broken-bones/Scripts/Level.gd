@@ -21,6 +21,7 @@ func _on_Submit_pressed():
 		part.position -= smallestvector2
 		
 	
+	Global.play_voiceline()
 	
 	Global.add_dinosaur(Dinosaur.new(dinosaur_parts,$"Margin/Main HBox/Middle VBox/HBoxContainer/Name".text))
 	
