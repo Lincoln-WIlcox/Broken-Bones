@@ -4,7 +4,6 @@
 [ext_resource path="res://Assets/Misc Objects/Alien.png" type="Texture" id=2]
 
 [node name="Alien" index="0" instance=ExtResource( 1 )]
-scale = Vector2( 0.49916, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 texture = ExtResource( 2 )
