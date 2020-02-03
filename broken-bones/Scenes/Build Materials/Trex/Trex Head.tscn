@@ -4,12 +4,13 @@
 [ext_resource path="res://Assets/Trex/trex_head.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 45, 8 )
+extents = Vector2( 164.197, 87.2362 )
 
-[node name="Trex Head" instance=ExtResource( 1 )]
+[node name="Trex Head" index="0" instance=ExtResource( 1 )]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 2.15198, 9.68408 )
 shape = SubResource( 1 )
