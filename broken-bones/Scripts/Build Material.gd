@@ -7,7 +7,10 @@ export var selection_variance := Vector2(20, 20)
 func _process(delta: float) -> void:
 	mouse_pos = get_viewport().get_mouse_position()
 	if lifted:
-		self.position = mouse_pos
+		position = mouse_pos
+		set_scale(Vector2(.55, .55))
+	else:
+		set_scale(Vector2(.5, .5))
 
 func _input(event):
    # Mouse in viewport coordinates
