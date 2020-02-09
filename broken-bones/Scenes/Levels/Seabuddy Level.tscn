@@ -50,7 +50,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 486.69, 439.907 )
+extents = Vector2( 470, 439.907 )
 
 [node name="Game UI Container" type="Control"]
 anchor_right = 1.0
@@ -88,7 +88,6 @@ size_flags_vertical = 3
 custom_constants/separation = 40
 
 [node name="Left VBox" type="VBoxContainer" parent="Margin/Main HBox"]
-editor/display_folded = true
 margin_right = 465.0
 margin_bottom = 1040.0
 rect_pivot_offset = Vector2( -144.37, 51.0713 )
@@ -251,5 +250,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Build Area"]
+position = Vector2( -20, 0 )
 shape = SubResource( 7 )
 [connection signal="pressed" from="Margin/Main HBox/Middle VBox/HBoxContainer/Submit" to="." method="_on_Submit_pressed"]

@@ -50,7 +50,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 516.496, 425.593 )
+extents = Vector2( 470, 425.593 )
 
 [node name="Game UI Container" type="Control"]
 anchor_right = 1.0
@@ -254,5 +254,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Build Area"]
+position = Vector2( -20, 0 )
 shape = SubResource( 7 )
 [connection signal="pressed" from="Margin/Main HBox/Middle VBox/HBoxContainer/Submit" to="." method="_on_Submit_pressed"]

@@ -64,6 +64,7 @@ margin_bottom = 516.0
 size_flags_vertical = 3
 
 [node name="Dinosaur1" type="Node2D" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox"]
+scale = Vector2( 0.6, 0.6 )
 z_index = 1
 
 [node name="MarginContainer4" type="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox"]
@@ -135,6 +136,7 @@ size_flags_vertical = 3
 
 [node name="Dinosaur2" type="Node2D" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox"]
 position = Vector2( -585, 0 )
+scale = Vector2( 0.6, 0.6 )
 z_index = 1
 
 [node name="MarginContainer3" type="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 2 Vbox"]
@@ -206,6 +208,7 @@ size_flags_vertical = 3
 
 [node name="Dinosaur3" type="Node2D" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox"]
 position = Vector2( -1170, 0 )
+scale = Vector2( 0.6, 0.6 )
 z_index = 1
 
 [node name="MarginContainer4" type="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 3 Vbox"]
