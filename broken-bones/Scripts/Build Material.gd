@@ -3,14 +3,15 @@ extends Area2D
 var lifted := false
 var mouse_pos: Vector2
 export var selection_variance := Vector2(20, 20)
+onready var original_scale = get_scale()
 
 func _process(delta: float) -> void:
 	mouse_pos = get_viewport().get_mouse_position()
 	if lifted:
 		position = mouse_pos
-		set_scale(Vector2(.55, .55))
+		set_scale(original_scale + Vector2(.05, .05))
 	else:
-		set_scale(Vector2(.5, .5))
+		set_scale(original_scale)
 
 func _input(event):
    # Mouse in viewport coordinates
