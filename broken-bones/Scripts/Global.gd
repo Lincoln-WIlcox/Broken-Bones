@@ -47,9 +47,7 @@ func start_game():
 
 
 func get_voice_audio_files() -> Array:
-	"""
-	gets all files in the voice lines folder and filter out non audio files
-	"""
+	# gets all files in the voice lines folder and filter out non audio files
 
 	var voice_line_files = get_files(VOICE_LINE_PATH)
 	var voice_audio_files = []
