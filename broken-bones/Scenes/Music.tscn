@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Sound/bbt.ogg" type="AudioStream" id=1]
-[ext_resource path="res://Assets/Sound/Dino-Mite 1.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Sound/Voice Lines/Submission/Dino-Mite 1.wav" type="AudioStream" id=2]
+
 
 [node name="Music" type="Node"]
 

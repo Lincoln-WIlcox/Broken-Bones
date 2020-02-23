@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sticks n Stones.wav-ed1122e0e695bb6a39d8071e81f0a4fd.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/Voice Lines/Submission/Sticks n Stones.wav"
+dest_files=[ "res://.import/Sticks n Stones.wav-ed1122e0e695bb6a39d8071e81f0a4fd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dino-Mite 1.wav-7f52b9531b3e048758abf4a5459c6155.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/Voice Lines/Submission/Dino-Mite 1.wav"
+dest_files=[ "res://.import/Dino-Mite 1.wav-7f52b9531b3e048758abf4a5459c6155.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
