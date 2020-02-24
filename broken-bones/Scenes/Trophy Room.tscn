@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Trophy Room.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Backgrounds/Office-Without-Pedestals.png" type="Texture" id=2]
@@ -9,6 +9,13 @@
 [sub_resource type="DynamicFont" id=1]
 size = 20
 font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Assets/machine-gunk-font/MachineGunk-nyqg.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 34
+font_data = SubResource( 2 )
 
 [node name="Trophy Room" type="Control"]
 anchor_right = 1.0
@@ -30,6 +37,7 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="Margin" type="MarginContainer" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 80.0
@@ -83,6 +91,7 @@ __meta__ = {
 }
 
 [node name="Hbox2" type="HBoxContainer" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer4"]
+editor/display_folded = true
 margin_right = 581.0
 margin_bottom = 400.0
 
@@ -93,6 +102,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="MarginContainer3" type="MarginContainer" parent="Margin/Pedastal Hbox/Pedastal 1 Vbox/MarginContainer4/Hbox2"]
+editor/display_folded = true
 margin_left = 233.0
 margin_right = 347.0
 margin_bottom = 400.0
@@ -274,3 +284,12 @@ margin_bottom = 920.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="."]
+margin_left = 64.6588
+margin_top = 1012.0
+margin_right = 218.659
+margin_bottom = 1058.0
+custom_fonts/font = SubResource( 3 )
+text = "Play Again"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

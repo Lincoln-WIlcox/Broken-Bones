@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 		set_scale(original_scale)
 
 func _input(event):
-   # Mouse in viewport coordinates
+	# Mouse in viewport coordinates
 	if event and event is InputEventMouseButton and event.pressed:
 		if match_mouse_pos():
 			lifted = !lifted

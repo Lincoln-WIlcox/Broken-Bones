@@ -9,10 +9,7 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[node name="Game Over Screen" index="0" instance=ExtResource( 1 )]
-
-[node name="Pedastal Hbox" parent="Margin" index="0"]
-editor/display_folded = false
+[node name="Game Over Screen" instance=ExtResource( 1 )]
 
 [node name="Label" type="Label" parent="Margin/Pedastal Hbox" index="0"]
 margin_top = 366.0

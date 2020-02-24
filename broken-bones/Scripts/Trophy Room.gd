@@ -23,17 +23,22 @@ $"Margin/Pedastal Hbox/Pedastal 3 Vbox/MarginContainer4/Hbox3/MarginContainer3/L
 
 func _ready():
 	Global.timer.stop()
-	
-	
-	
+
+
+
 	if rand_range(0,2) > 1:
 		$"Space Background".visible = false
-	
+
 	for spotindex in range(dinospots.size()):
 		dinospots[spotindex].position = margincontainers[spotindex].get_position()
-	
+
 	for dinosaur_index in range(Global.dinosaurs.size()):
 		var dinosaur = Global.dinosaurs[dinosaur_index]
 		labels[dinosaur_index].text = dinosaur.dino_name
 		for part in dinosaur.dinosaur_parts:
 			dinospots[dinosaur_index].add_child(part)
+
+
+func _on_Button_pressed() -> void:
+	Global.dinosaurs.clear()
+	Global.start_game()
