@@ -53,8 +53,9 @@ func get_voice_audio_files() -> Array:
 	var voice_audio_files = []
 
 	for file in voice_line_files:
-		if file.get_extension() == "wav":
-			voice_audio_files.append(file)
+		# we have to do this due to https://github.com/godotengine/godot/issues/18390
+		if file.get_extension() == "import":
+			voice_audio_files.append(file.replace(".import", ""))
 
 	return voice_audio_files
 
